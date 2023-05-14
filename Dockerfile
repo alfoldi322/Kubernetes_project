@@ -17,7 +17,7 @@ RUN sed -i 's/DirectoryIndex.*/DirectoryIndex index.html/g' /etc/apache2/mods-en
 # Set the ServerName directive to suppress warning message
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Expose port 80
+
 EXPOSE 80
 
 # Start apache2 in the foreground
