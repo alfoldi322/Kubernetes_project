@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion : apps/v1
+metadata:
+	name: alfoldi322
+spec:
+	replicas:2
+	selector:
+	 matchLabels:
+	  app: alfoldi322
+	template:
+	  metadata:
+	    labels:
+	      app: alfoldi322
+	  spec:
+	   containers:
+	     - name: alfoldi322
+	       image: alfoldi322/pipeline_demo
+	       imagePullPolicy: Always
+	       ports:
+	     - containerPort: 80
