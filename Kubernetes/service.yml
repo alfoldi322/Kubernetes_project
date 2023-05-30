@@ -4,11 +4,11 @@ metadata:
   name: alfoldi322
   labels:
     app: alfoldi322
-  spec:
-    ports:
-      - port: 8080
-        targetPort: 80
-        nodePort: 31200
-    selector:
-      app: alfoldi322
-      type: ClusterIP
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 31200
+  selector:
+    app: alfoldi322
