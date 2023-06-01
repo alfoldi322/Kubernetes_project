@@ -28,6 +28,7 @@ The pipeline script automates various stages of the build and deployment process
 
 I setup static IP for the VMs in /etc/netplan/...
 
+
 - IP Jenkins: 192.168.1.49
 - IP Ansible: 192.168.1.50
 - IP Kubernetes 192.168.1.51
@@ -35,8 +36,7 @@ I setup static IP for the VMs in /etc/netplan/...
 
 ## Pipeline steps
 
-Git Checkout
-Description: Checks out the project repository from GitHub.
+### Git Checkout
 
 ```
 stage('Git Checkout') {
@@ -45,8 +45,7 @@ stage('Git Checkout') {
 ```
 
 
-Send files to Ansible server
-Description: Copies the project files to the Ansible server.
+### Send files to Ansible server
 
 ```
 stage('Send files to Ansible server') {
@@ -58,8 +57,7 @@ stage('Send files to Ansible server') {
 ```
 
 
-Build docker image
-Description: Builds a Docker image for the web application.
+### Build docker image
 
 ```
 stage('Build docker image') {
@@ -71,8 +69,7 @@ stage('Build docker image') {
 ```
 
 
-Tag docker image
-Description: Tags the Docker image with version and latest tags.
+### Tag docker image
 
 ```
 stage('Tag docker image') {
@@ -85,8 +82,7 @@ stage('Tag docker image') {
 ```
 
 
-Push docker image to DockerHub
-Description: Pushes the Docker image to the DockerHub repository.
+### Push docker image to DockerHub
 
 ```
 stage('Push docker image to DockerHub') {
@@ -102,8 +98,7 @@ stage('Push docker image to DockerHub') {
 ```
 
 
-Copy files to Kubernetes
-Description: Copies Kubernetes configuration files to the Kubernetes server.
+### Copy files to Kubernetes
 
 ```
 stage('Copy files to Kubernetes') {
@@ -115,8 +110,7 @@ stage('Copy files to Kubernetes') {
 ```
 
 
-Kubernetes deployment with Ansible
-Description: Deploys the application on the Kubernetes cluster using Ansible.
+### Kubernetes deployment with Ansible
 
 ```
 stage('Kubernetes deployment with Ansible') {
