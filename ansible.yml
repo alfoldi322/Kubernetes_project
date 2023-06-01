@@ -7,6 +7,3 @@
     - name: create new service
       shell: kubectl apply -f /home/ubuntu/Kubernetes/service.yml
       become_user: ubuntu
-    - name: port-forward service
-      shell: kubectl port-forward svc/alfoldi322 8080:80
-      become_user: ubuntu
