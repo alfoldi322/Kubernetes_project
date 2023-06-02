@@ -1,5 +1,9 @@
 # Kubernetes_project
 
+
+![project_diagram](https://github.com/alfoldi322/Kubernetes_project/blob/main/project_diagram.png)
+
+
 ## Overview
 
 The project is a hands-on learning experience with multi-component environment consisting of Jenkins, Ansible, and a web application deployed on a Kubernetes cluster. The primary goal of this project is to gain practical knowledge and proficiency in using these tools and technologies.
@@ -35,6 +39,8 @@ I setup static IP for the VMs in /etc/netplan/...
 
 
 ## Pipeline steps
+
+![image of the pipeline in jenkins ui](https://github.com/alfoldi322/Kubernetes_project/blob/main/pipeline.png)
 
 ### Git Checkout
 
